@@ -110,3 +110,5 @@ operacja = input("Co zamierzasz zrobić?")
 
 if operacja == "1": print(kup())
 if operacja == "2": print(usun())
+
+# wtf zostaw to kurwa bo Ci znajdenie dotykalem nic XD
