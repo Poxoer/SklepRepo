@@ -53,3 +53,4 @@ print("Dowidzenia")
 #Pokrzepiające dusze oraz motywujące
 #"a tak pozatym to bardzo dobrze CI idzie ziomeczku"
 #TODO WYKONAC ASORTYMENT SKLEPU ; CENNIK i SUME ZAKUPÓW
+#TODO XD
