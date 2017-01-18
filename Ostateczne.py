@@ -1,6 +1,5 @@
 koszyk = []
 def menu():
-
     print("Podchodzi do Ciebie pani ekspedientka ")
     print("Dzisiaj mamy bardzo mało towaru ale napewno coś dla Ciebie sie znajdzie ! :)")
     print("Zdecyduj co chcesz zrobić!")
@@ -40,7 +39,6 @@ def kup():
 
         elif ans == "Dziekuje":
             print("Zrezygnowałeś z dalszych zakupów")
-
             break
 
         else:
@@ -111,4 +109,4 @@ operacja = input("Co zamierzasz zrobić?")
 if operacja == "1": print(kup())
 if operacja == "2": print(usun())
 
-# wtf zostaw to kurwa bo Ci znajdenie dotykalem nic XD
+# A powinno mi sie menu otworzyc tak dokladnie menu2
