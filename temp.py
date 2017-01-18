@@ -1,6 +1,6 @@
 koszykUzytkownika = []
 czyDalejRobieZakupy = True
-
+asortyment = ["Mleko","Chleb","Masło","Kurczak","Jajka","Ogorek","Pomidor","Cukierki","Szynka"]
 def menu():
     print("Co chcesz zrobić?")
     print("1. Dodaj do koszyka")
@@ -12,7 +12,10 @@ def menu():
 def kup():
     print("Co chcesz dodac?")
     wybranyPrzedmiot = input()
-    koszykUzytkownika.append(wybranyPrzedmiot)
+    if wybranyPrzedmiot == asortyment:
+        koszykUzytkownika.append(wybranyPrzedmiot)
+    else:
+        print("Wpierdol. W asortymencie nie ma takiego itemku")
 
 def pokazKoszyk():
     print("Teraz twoj koszyk zawiera:")
