@@ -11,11 +11,17 @@ def menu():
 
 def kup():
     print("Co chcesz dodac?")
+
     wybranyPrzedmiot = input()
-    if wybranyPrzedmiot == asortyment:
-        koszykUzytkownika.append(wybranyPrzedmiot)
-    else:
-        print("Wpierdol. W asortymencie nie ma takiego itemku")
+    dlug = len(asortyment)
+    for i in range(dlug):
+        if wybranyPrzedmiot == asortyment[i]:
+            koszykUzytkownika.append(wybranyPrzedmiot)
+            break
+        elif wybranyPrzedmiot != asortyment[i]:
+            continue
+        elif wybranyPrzedmiot != asortyment[i] and i == dlug:
+            print("Wpierdol. W asortymencie nie ma takiego itemku")
 
 def pokazKoszyk():
     print("Teraz twoj koszyk zawiera:")
