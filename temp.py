@@ -2,13 +2,6 @@ koszykUzytkownika = []
 czyDalejRobieZakupy = True
 asortyment = ["Mleko","Chleb","Masło","Kurczak","Jajka","Ogorek","Pomidor","Cukierki","Szynka"]
 
-def czyJestWasortymencie(item):
-    if item in asortyment:
-        return True
-    else:
-        return False
-
-
 def menu():
     print("Co chcesz zrobić?")
     print("1. Dodaj do koszyka")
@@ -21,27 +14,10 @@ def kup():
     print("Co chcesz dodac?")
 
     wybranyPrzedmiot = input()
-    # obczaj tutaj wybierasz indeks elementu z tablicy od uzytkownika
-    # masz tablice asortyment ktora ma od 0 do n elementow.
-    # musisz sprawdzic jaka liczbe podal uzytkownik i dodac element o wybranym indeksie do koszyka, prosta sprawa
-    # jedyne co sprawdzasz to czy podany indeks nie jest wiekszy niz wielkosc tablicy
-    # czaisz?Nom 3/4 ale coś tak
-    # no tylko teraz jest tak, ze to co pobierasz od uzytkownika to tekst dlatego wyjebal sie blad
-    # trzeba tekst zamienic na liczbe
-    if czyJestWasortymencie(wybranyPrzedmiot):
+    if wybranyPrzedmiot in asortyment:
         koszykUzytkownika.append(wybranyPrzedmiot)
     else:
         print("Wpierdol. W asortymencie nie ma takiego itemku")
-
-    # dlug = len(asortyment)
-    # for i in range(dlug):
-    #     if wybranyPrzedmiot == asortyment[i]:
-    #         koszykUzytkownika.append(wybranyPrzedmiot)
-    #         break
-    #     elif wybranyPrzedmiot != asortyment[i]:
-    #         continue
-    #     elif i == dlug:
-    #         print("Wpierdol. W asortymencie nie ma takiego itemku")
 
 def pokazKoszyk():
     print("Teraz twoj koszyk zawiera:")
@@ -49,10 +25,12 @@ def pokazKoszyk():
 
 def usun():
     print("Co chcesz usunąć?")
-    #todo pomyśleć jak wykonać
-    #- Usuwanie z koszyka
-    #- Odmowe usuwania z koszyka jeżeli produkt nie znajduje sie w koszyku
-    #- Poszukać w Internecie jak to wykonać XD
+
+    wybranyPrzedmiot = input()
+    if wybranyPrzedmiot in koszykUzytkownika:
+        koszykUzytkownika.remove(wybranyPrzedmiot)
+    else:
+        print("Wpierdol. W koszyku nie ma takiego itemku")
 
 
 while czyDalejRobieZakupy:
@@ -65,6 +43,8 @@ while czyDalejRobieZakupy:
         pokazKoszyk()
         usun()
 
+    elif wyborUzytkownika == '3':
+        pokazKoszyk()
 
 
     elif wyborUzytkownika == '3':
